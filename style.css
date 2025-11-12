@@ -1,0 +1,31 @@
+
+:root{ --bg-navy:#0C2231; --gold:#d2b56f; --gold-mid:#b99245; --gold-deep:#8a6a2b; --name-top:22%; }
+html,body{height:100%}
+.splash-body{
+  margin:0; min-height:100vh; background-color:var(--bg-navy);
+  background-image:url("Carpe_Diem.png"); background-position:center; background-size:cover; background-repeat:no-repeat;
+  background-attachment:fixed; cursor:pointer; font-family:ui-serif, Georgia, 'Times New Roman', serif; color:var(--gold);
+  overscroll-behavior:contain; -webkit-tap-highlight-color:transparent;
+}
+.splash-overlay{ position:fixed; top:var(--name-top); left:0; right:0; text-align:center; padding:0 12px; pointer-events:none; }
+.name-tip{ display:inline-block; margin-bottom:10px; padding:4px 10px; font-size:12px; color:var(--gold);
+  background:rgba(0,0,0,.18); border:1px solid rgba(255,255,255,.15); border-radius:999px; box-shadow:0 8px 18px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.35);
+  opacity:0; transform:translateY(-6px); transition:opacity .5s ease, transform .5s ease; pointer-events:none; }
+.name-tip.show{ opacity:1; transform:translateY(0) }
+.foil-emboss{ background-image:linear-gradient(180deg, rgba(255,255,255,.46) 0%, var(--gold) 20%, var(--gold-mid) 40%, var(--gold-deep) 55%, var(--gold) 72%, rgba(255,255,255,.55) 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent; text-shadow:0 1px 0 rgba(255,255,255,.15), 0 2px 0 rgba(0,0,0,.55), 0 12px 24px rgba(0,0,0,.35); }
+.owner-name{ margin:0; font-weight:900; letter-spacing:.14em; text-transform:capitalize; font-size:clamp(28px, 4.4vw, 44px); display:inline-block; pointer-events:auto; }
+.owner-input{ font:inherit; font-weight:900; letter-spacing:.14em; text-transform:capitalize; text-align:center; color:#3a2b08;
+  border:1.5px solid rgba(210,181,111,.65); box-shadow:0 0 0 2px rgba(210,181,111,.22); border-radius:10px; padding:6px 12px; min-width:240px; background:rgba(255,255,255,.92); outline:none; }
+#resetIcon{ position:fixed; top:18px; right:18px; width:34px; height:34px; border-radius:50%;
+  background:var(--gold); color:#241b08; font-weight:bold; font-size:20px; display:flex; align-items:center; justify-content:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.4), inset 0 1px 2px rgba(255,255,255,.5); opacity:0; transition:opacity .4s ease; cursor:pointer; pointer-events:none; z-index:20; }
+#resetIcon.show{ opacity:1; pointer-events:auto; }
+#confirmBox{ position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(255,255,255,.12); backdrop-filter:blur(12px);
+  border:1.5px solid rgba(255,255,255,.25); border-radius:16px; padding:24px 32px; text-align:center; color:var(--gold); box-shadow:0 8px 24px rgba(0,0,0,.4); display:none; z-index:50; }
+#confirmBox.show{ display:block; animation:fadeIn .3s ease; }
+#confirmBox p{ margin:0 0 16px; font-size:18px; font-weight:600; }
+#confirmBox button{ margin:0 6px; padding:8px 20px; border:none; border-radius:10px; font-weight:700; cursor:pointer; color:#2b1d03; font-size:15px; }
+#btnYes{ background:var(--gold); box-shadow:inset 0 2px 4px rgba(255,255,255,.45), 0 2px 6px rgba(0,0,0,.45); }
+#btnNo{ background:rgba(210,181,111,.75); }
+@keyframes fadeIn{ from{ opacity:0; transform:translate(-50%,-55%);} to{ opacity:1; transform:translate(-50%,-50%);} }
