@@ -6,21 +6,21 @@
 
 /* Global base ------------------------------------------------------------- */
 :root{
-  --bg-navy:#0C2231;
-  --gold:#d2b56f;
-  --gold-mid:#b99245;
-  --gold-deep:#8a6a2b;
-  --ink:#102532;
-  --accent:#0f5f99;
-  --accent-soft:#e4f1ff;
-  --pill-bg:#f1f3f7;
-  --pill-border:#d0d5e4;
+  --bg-navy:#0E2436;
+  --gold:#CFB06E;
+  --gold-mid:#B89452;
+  --gold-deep:#8F6C2D;
+  --ink:#27313F;
+  --accent:#0E2436;
+  --accent-soft:#E7ECF4;
+  --pill-bg:#F6F4EF;
+  --pill-border:#D9C7A3;
   --card-bg:#ffffff;
-  --card-shadow:0 14px 35px rgba(15,32,60,.16);
+  --card-shadow:0 14px 35px rgba(14,36,54,.16);
   --radius-card:18px;
   --radius-pill:999px;
   --name-top:8%;
-  --page-bg:#f5f7fb;
+  --page-bg:#F7F5F0;
 }
 
 html,body{
@@ -38,7 +38,7 @@ html,body{
 .splash-body{
   min-height:100vh;
   background-color:var(--bg-navy);
-  background-image:url("Carpe_Diem.png");
+  background-image:url("Carpe-Diem.png");
   background-repeat:no-repeat;
   background-position:center 44%;
   background-size:78%;
@@ -247,8 +247,8 @@ header.glass{
   width:14px;
   height:14px;
   border-radius:50%;
-  background:linear-gradient(135deg, #0f5f99, #32c4ff);
-  box-shadow:0 0 0 3px rgba(15,95,153,.22);
+  background:linear-gradient(135deg, var(--gold), var(--gold-mid));
+  box-shadow:0 0 0 3px rgba(207,176,110,.25);
 }
 
 .brand h1{
@@ -261,9 +261,9 @@ header.glass{
   font-size:13px;
   padding:4px 10px;
   border-radius:999px;
-  background:#0f5f99;
-  color:#fff;
-  box-shadow:0 5px 14px rgba(15,95,153,.4);
+  background:var(--bg-navy);
+  color:#FDF7E3;
+  box-shadow:0 5px 14px rgba(14,36,54,.45);
 }
 
 .actions{
@@ -289,11 +289,11 @@ button, .pill{
 }
 
 .pill.primary{
-  background:var(--accent);
-  color:#fff;
-  border-color:rgba(7,57,96,1);
+  background:var(--bg-navy);
+  color:#FDF7E3;
+  border-color:var(--bg-navy);
   box-shadow:
-    0 8px 18px rgba(4,52,98,.35),
+    0 8px 18px rgba(14,36,54,.35),
     inset 0 1px 0 rgba(255,255,255,.4);
 }
 
@@ -376,13 +376,13 @@ main{
 }
 
 .stamp-chip.stamped{
-  background:#0f9b63;
-  color:#fff;
-  border-color:#05623a;
+  background:var(--gold);
+  color:#2A1E08;
+  border-color:var(--gold-deep);
 }
 
 .row-selected{
-  background:rgba(15,95,153,.06);
+  background:rgba(14,36,54,.06);
 }
 
 /* Map panel --------------------------------------------------------------- */
