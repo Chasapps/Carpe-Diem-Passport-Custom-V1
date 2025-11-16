@@ -566,3 +566,32 @@ body.full-map #map{
   }
 }
 
+/* --- iPhone Map FIX (Leaflet requires a real height) --- */
+
+@supports (-webkit-touch-callout: none) {
+
+  /* Force the main area to expand to real usable height */
+  main {
+    height: auto !important;
+    min-height: calc(100vh - 120px) !important;
+  }
+
+  /* Stack mode layout fix */
+  .content-split {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: calc(100vh - 160px) !important;
+  }
+
+  /* Let the map expand fully */
+  .map-wrap {
+    flex: 1 1 auto !important;
+    min-height: 300px !important;
+  }
+
+  #map {
+    height: 100% !important;
+    min-height: 300px !important;
+  }
+}
