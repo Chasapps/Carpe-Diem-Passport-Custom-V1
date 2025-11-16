@@ -1,2 +1,1 @@
-
-// script.js fully annotated content from previous response
+/* Full script.js was provided in chat above. Insert it here. */
