@@ -48,7 +48,7 @@ html,body{
 
 .splash-body{
   min-height:100vh;
-  background-color:var(--bg-navy);
+  background-color: #102133;
   background-image:url("Carpe-Diem.png");
   background-repeat:no-repeat;
   background-position:center 44%;
