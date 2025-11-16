@@ -523,3 +523,35 @@ body.full-map #map{
     height:100% !important;
   }
 }
+/* --- FIX FORCE MAP LAYOUT --- */
+.content-split{
+  display:grid !important;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr) !important;
+  gap:10px !important;
+}
+
+.map-wrap{
+  position:relative !important;
+}
+
+.map-wrap #map{
+  height:320px !important;
+  border-radius:14px;
+  overflow:hidden;
+}
+
+@media (max-width:700px){
+  .content-split{
+    display:flex !important;
+    flex-direction:column !important;
+    height:100% !important;
+  }
+  .map-wrap{
+    flex:1 1 auto !important;
+    margin-top:8px;
+  }
+  .map-wrap #map{
+    height:100% !important;
+  }
+}
+
